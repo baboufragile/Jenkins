@@ -17,11 +17,14 @@ import static org.junit.Assert.*;
  */
 public class CalculatriceJenkinsIT {
     
+    private static CalculatriceJenkins calculatrice;
+    
     public CalculatriceJenkinsIT() {
     }
     
     @BeforeClass
     public static void setUpClass() {
+        calculatrice = new CalculatriceJenkins();
     }
     
     @AfterClass
@@ -44,7 +47,32 @@ public class CalculatriceJenkinsIT {
         System.out.println("main");
         String[] args = null;
         CalculatriceJenkins.main(args);
-        // TODO review the generated test code and remove the default call to fail.
+    }
+    
+    @Test
+    public void testMultiply() {
+        assertEquals( "Regular multiplication should work", calculatrice.multiply(4,5), 20);
+    }
+    
+    @Test
+    public void testSubstract() {
+        assertEquals( "Regular substraction should work", calculatrice.substract(10,5), 5);
+    }
+    
+    @Test
+    public void testAdd() {
+        assertEquals( "Regular addition should work", calculatrice.add(4,5), 9);
+    }
+    
+    @Test
+    public void testDivide() {
+        assertEquals( "Regular division should work", calculatrice.divide(20,5), 4);
+    }
+    
+    @Test
+    public void testMultiplyWithZero() {
+        assertEquals("Multiple with zero should be zero",0,  calculatrice.multiply(0,5));
+        assertEquals("Multiple with zero should be zero", 0, calculatrice.multiply(5,0));
     }
     
 }
