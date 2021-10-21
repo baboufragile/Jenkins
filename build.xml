@@ -70,4 +70,11 @@
     nbproject/build-impl.xml file. 
 
     -->
+    
+      <junit>
+        <classpath refid="classpath.test" />
+        <formatter type="xml"/>
+        <test name="com.tests.nav1" todir="${test.reports}"/>
+    </junit>
+    
 </project>
