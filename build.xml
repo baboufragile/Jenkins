@@ -87,6 +87,5 @@
         </junit>
         <!-- Empty placeholder for easier customization. -->
         <!-- You can override this target in the ../build.xml file. -->
-        </target>me="${test.reports}/test-output.txt" action="start"/>
     </target>
 </project>
