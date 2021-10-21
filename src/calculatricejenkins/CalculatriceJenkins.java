@@ -7,6 +7,7 @@ package calculatricejenkins;
 /**
  *
  * @author ald
+ * junit
  */
 
 public class CalculatriceJenkins {
