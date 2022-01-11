@@ -38,7 +38,7 @@ public class CalculatriceJenkins {
          return num - num1;
         
     }
-    
+    //mabite
     public int divide(int num, int num1){
          return num / num1;
         
